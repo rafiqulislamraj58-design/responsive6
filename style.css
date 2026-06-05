@@ -1,0 +1,50 @@
+@font-face {
+    font-family: Reckless;
+    src: url(./fonts/RecklessCondensedS-TRIAL-Book.woff);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fbf9eb;
+    padding: 1vw;
+}
+nav{
+    width: 100%;
+    background-color: #fffefb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Reckless;
+    padding: 0.15vh 1vw;
+    border-radius: 1vw;
+}
+nav .nav-part1{
+    display: flex;
+    gap: 1rem;
+    font-weight: 100;
+  
+   
+}
+nav .nav-part2{
+    width: 5vw;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+  align-items: center;
+}
+.nav-part2 img{
+    width: 100%;
+
+}
+nav .navpart-3{
+    display: flex;
+     gap: 3vw;
+   font-size: 1rem;
+
+   
+}
