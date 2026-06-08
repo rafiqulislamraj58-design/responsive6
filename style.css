@@ -2,6 +2,10 @@
     font-family: Reckless;
     src: url(./fonts/RecklessCondensedS-TRIAL-Book.woff);
 }
+@font-face {
+    font-family: fingtree;
+    src: url('./fonts/figtree.woff2');
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -10,28 +14,49 @@
 main{
     width: 100%;
     min-height: 100vh;
-    background-color: #fbf9eb;
-    padding: 1vw;
+    background-color: #f0edd9;
+    padding: 1rem 0;
+    
 }
-nav{
+.offer{
     width: 100%;
-    background-color: #fffefb;
+    background-color: rgb(16, 16, 85);
+    color: white;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    top: 0;
+    left: 0;
+    
+}
+.offer .top{
+color: white;
+text-align: center;
+}
+
+nav{
+    width: 98%;
+    margin: 0 auto;
+    background-color: #f7f4eb;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-family: Reckless;
-    padding: 0.15vh 1vw;
+    padding: 0.15vh 2vw;
     border-radius: 1vw;
+    top: 0;
+    left: 0;
 }
 nav .nav-part1{
     display: flex;
     gap: 1rem;
-    font-weight: 100;
-  
-   
+    font-weight: 100; 
+    width: 26%; 
 }
 nav .nav-part2{
-    width: 5vw;
+    width: 60px;
     height: auto;
     object-fit: cover;
     display: flex;
@@ -47,4 +72,133 @@ nav .navpart-3{
    font-size: 1rem;
 
    
+}
+.cart{
+    font-size: 1.5rem;
+}
+#section1{
+    object-fit: fill;
+    position: relative;
+}
+
+#section1 .banner:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+.benner-contend{
+position: absolute;
+color: white;
+top: 55%;
+left: 10%;
+font-family: fingtree;
+} 
+.benner-contend h1{
+    font-size: 2.5rem;
+} 
+.banner{
+    width: 100%;
+    object-fit: cover;
+}
+.header{
+    position: sticky;
+    padding: 1vw;
+    top: 0;
+    z-index: 999;
+}
+.btn{
+    margin-top: 0.8rem;
+    background-color: #2a2857;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5rem;
+    color: white;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.textsection2{
+    text-align: center;
+    font-family: Reckless;
+    font-size: 2rem;
+    margin-top: 80px;
+}
+
+
+@media (max-width:768px){
+
+    .nav-part1 h3{
+        display: none;
+    }
+    
+
+    .navpart-3 h3{
+        display: none;
+        width: 15%;
+    }
+
+    #menu-bar{
+        display: block;
+        font-size: 2rem;
+    }
+    nav{
+        position: relative;
+    }
+
+    .nav-part2{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #section1 .banner{
+        height: 80vh;
+    }
+   #section1 .benner-contend{
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+    #section1 .benner-contend .btn{
+        width: 80vw;
+    }
+
+}
+@media (max-width: 1024px) {
+   nav{
+        padding: 0.85rem 1rem;
+        display: flex;
+        align-items: center;
+        
+    }
+       .nav-part2 {
+        width: 50px;
+    
+    }  nav .nav-part1,
+    nav .navpart-3 {
+        gap: 1rem;
+        font-size: 0.68rem;
+        align-items: center;
+    }
+    nav .nav-part1{
+        font-size: 0.65rem;
+    }
+     #section1 .banner {
+        height: 75vh;
+        object-fit: cover;
+    }
+      .benner-contend h1 {
+        font-size: 2rem;
+    }
+     .benner-contend p {
+        font-size: 0.9rem;
+        max-width: 500px;
+    }
+       .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
 }
