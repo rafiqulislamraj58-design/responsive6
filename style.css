@@ -6,6 +6,10 @@
     font-family: fingtree;
     src: url('./fonts/figtree.woff2');
 }
+@font-face {
+    font-family: Midnight;
+    src: url('./fonts/midnight-sans-rd-12-semibold-trial.otf');
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -44,7 +48,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     font-family: Reckless;
-    padding: 0.15vh 2vw;
+    padding: 1vh 2vw;
     border-radius: 1vw;
     top: 0;
     left: 0;
@@ -124,81 +128,170 @@ font-family: fingtree;
     font-size: 2rem;
     margin-top: 80px;
 }
-
-
-@media (max-width:768px){
-
-    .nav-part1 h3{
-        display: none;
-    }
-    
-
-    .navpart-3 h3{
-        display: none;
-        width: 15%;
-    }
-
-    #menu-bar{
-        display: block;
-        font-size: 2rem;
-    }
-    nav{
-        position: relative;
-    }
-
-    .nav-part2{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    #section1 .banner{
-        height: 80vh;
-    }
-   #section1 .benner-contend{
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    text-align: center;
+.btnsection2{
+    background-color: #d186e7;
+    border: none;
+    padding: 0.2em 0.5rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-family: fingtree;
+    transform: scale(1.5);
+    transform: rotate(-5deg);
+    padding: 1rem 5rem,;
+    font-family: Midnight;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    margin: 50px auto;
 }
-    #section1 .benner-contend .btn{
-        width: 80vw;
-    }
-
+#menu-bar{
+    display: none;
 }
+.btncard{
+    font-family: Midnight;
+    padding: 0.3rem .40rem;
+}
+.card{
+    background-color: #C1EE91;
+    border-radius: 8px;
+    border: 1px solid black;
+    min-width: 260px;
+    max-width: 300px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    padding-bottom: 10px;
+}
+.cardimg img {
+    width: 100%;
+    display: block;
+     transition: transform 0.5s ease-in-out;
+}
+.cardimg img:hover{
+    transform: scale(1.1);
+}
+
+.cardcontain:nth-child(1) .card { background-color: #C1EE91; }
+.cardcontain:nth-child(2) .card { background-color: #F5E6C8; }
+.cardcontain:nth-child(3) .card { background-color: #B8EAD8; }
+.cardcontain:nth-child(4) .card { background-color: #F0D4E8; }
+.cardcontain:nth-child(5) .card { background-color: #FFF3B0; }
+.cardcontain:nth-child(6) .card { background-color: #FFD6C0; }
+.cardcontain:nth-child(7) .card { background-color: #D6E4FF; }
+.cardcontain:nth-child(8) .card { background-color: #E8D5F5; }
+.cardtop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+.addbtn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 8px;
+}
+.btnadd {
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+}
+.cardwraper{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 20px;
+    scrollbar-width: none;
+}
+.cardwraper::-webkit-scrollbar {
+    display: none;
+}
+/* responsive  */
 @media (max-width: 1024px) {
-   nav{
+    nav {
         padding: 0.85rem 1rem;
-        display: flex;
-        align-items: center;
-        
     }
-       .nav-part2 {
+    .nav-part2 {
         width: 50px;
-    
-    }  nav .nav-part1,
+    }
+    .cardwraper{
+    display: flex;
+    overflow-x: auto;
+}
+    nav .nav-part1,
     nav .navpart-3 {
         gap: 1rem;
         font-size: 0.68rem;
         align-items: center;
     }
-    nav .nav-part1{
-        font-size: 0.65rem;
-    }
-     #section1 .banner {
+    #section1 .banner {
         height: 75vh;
-        object-fit: cover;
+        object-fit: cover;  
     }
-      .benner-contend h1 {
+    .benner-contend h1 {
         font-size: 2rem;
     }
-     .benner-contend p {
+    .benner-contend p {
         font-size: 0.9rem;
         max-width: 500px;
     }
-       .btn {
+    .btn {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
     }
+}
 
+@media (max-width: 768px) {
+    .textsection2 {
+        font-size: 1.5rem;
+    }
+    .nav-part1 h3 {
+        display: none;
+    }
+    .navpart-3 h3 {
+        display: none;
+    }
+    .navpart-3 {
+        gap: 0; 
+    }
+    .cardwraper{
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        justify-content: flex-start;
+        scroll-snap-type: x mandatory;
+    }
+    
+    
+    
+
+    .card{
+        flex-shrink: 0;
+        min-width: 260px;
+    }
+    #menu-bar {
+        display: block;
+        font-size: 2rem;
+    }
+    nav {
+        position: relative;
+    }
+    .nav-part2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #section1 .banner {
+        height: 80vh;
+        object-fit: cover;  
+        width: 100%;
+    }
+    #section1 .benner-contend {
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+    #section1 .benner-contend .btn {
+        width: 80vw;
+    }
 }
