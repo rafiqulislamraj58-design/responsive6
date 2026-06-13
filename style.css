@@ -15,12 +15,14 @@
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    background-color: #f0edd9;
+}
 main{
     width: 100%;
     min-height: 100vh;
-    background-color: #f0edd9;
     padding: 1rem 0;
-    
+    overflow-x: hidden;
 }
 .offer{
     width: 100%;
@@ -48,7 +50,12 @@ nav{
     align-items: center;
     justify-content: space-between;
     font-family: Reckless;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     padding: 1vh 2vw;
+    max-width: 100%;
+    overflow-x: hidden;
     border-radius: 1vw;
     top: 0;
     left: 0;
@@ -58,6 +65,7 @@ nav .nav-part1{
     gap: 1rem;
     font-weight: 100; 
     width: 26%; 
+    
 }
 nav .nav-part2{
     width: 60px;
@@ -101,10 +109,10 @@ font-family: fingtree;
 } 
 .banner{
     width: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    display: block;
 }
 .header{
-    position: sticky;
     padding: 1vw;
     top: 0;
     z-index: 999;
@@ -197,46 +205,583 @@ font-family: fingtree;
     display: flex;
     gap: 10px;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 10px 20px;
-    scrollbar-width: none;
+    justify-content: flex-start;
 }
-.cardwraper::-webkit-scrollbar {
+.btnex{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.btnsection{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 1200px;
+    margin: 0 auto;
+}
+#section3{
+    font-size: 2rem;
+
+}
+#secion4 .section4img{
+    margin-top: 50px;
+    height: 98vh;
+    width: 100%;
+    object-fit: cover;
+}
+#secion4{
+    position: relative;
+}
+#secion4 .ketlly .kellyimg{
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 90vw;
+    
+}
+#secion4 .sec4heading{
+    text-transform: uppercase;
+    font-family: Midnight;
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    position: absolute;
+    top: 20%;
+    left: 43%;
+}
+#section3 .section3contend{
+    width: 1200px;
+    margin: 10px auto;
+    font-family: Reckless;
+
+}
+#section3 .section3contend .btn3{
+    background-color: rgb(255, 150, 4);
+    font-family: Midnight;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    transform: rotate(-5deg);
+    margin-bottom: 1.5rem;
+
+}
+
+.btnsection button{
+    font-family: Midnight;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.2rem;
+    border-radius: 10px;
+    background-color: #b4e1fb;
+     width: calc((100% - 30px) / 4);
+}
+.btn4{
+    font-family: Midnight;
+    font-size: 2rem;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    background-color: #b4e1fb;
+    transform: rotate(-5deg);
+    position: absolute;
+    top: 10%;
+    left: 42%;
+    
+}
+
+.sec4text{
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-family: fingtree;
+
+}
+.imgbttom{
+    display: flex;
+    gap: 10px;
+}
+.imgbttom p{
+    color: white;
+    font-family: fingtree;
+}
+.container{
+    position: absolute;
+    top: 76%;
+    left: 43%;
+}
+ .imges{
+    width: 70px;
+}
+.feld{
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 5px;
+}
+#section5{
+    width: 100%;
+    overflow: hidden;
+    padding: 0.2rem 0;
+    margin: 0 auto;
+}
+
+.review-header{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.btnreview{
+    background: #8cc63f;
+    padding: .8rem 1rem;
+    border-radius: 6px;
+    font-size: 2rem;
+    border: 1px solid #000;
+    font-family: Midnight;
+    transform: rotate(-3deg);
+    margin-bottom: 1rem;
+}
+
+.review-header h2{
+    font-family: Reckless;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.review-wrapper{
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    margin-top: 3rem;
+
+    margin-left: 5rem;
+    padding-inline: 2rem;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.review-wrapper::-webkit-scrollbar{
     display: none;
 }
+
+.review-card{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    padding: 2rem;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card:nth-child(1){
+    background: #E8AA86;
+}
+
+.review-card:nth-child(2){
+    background: #A8DB68;
+}
+
+.review-card:nth-child(3){
+    background: #F3C85A;
+}
+.review-card:nth-child(4){
+    background-color: #fc7bf6;
+}
+
+.review-card h3{
+    font-family: Reckless;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.author{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: .4rem;
+}
+
+.product img{
+    width: 50px;
+}
+
+.product button{
+    padding: .5rem 0.6rem;
+    border-radius: 30px;
+    border: 1px solid #000;
+    background: white;
+}
+.imgtea{
+    width: 90vh;
+}
+.cardwarper{
+    margin-top: 50px;
+    background-color: #353095;
+    display: flex;
+}
+.teaheading{
+    color: white;
+    font-size: 5rem;
+    font-family: Reckless;
+    margin-top: 150px;
+    margin-left: 80px;
+}
+.teapara{
+    color: white;
+    font-family: Reckless;
+    margin-top: 10px;
+    font-size: 2rem;
+    margin-left: 80px;
+}
+.teabutton{
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+.sectionwraper{
+    background-color: #f27d39;
+    height: 100%;
+    
+}
+.topsec6 h3,
+.topsec6 p{
+    text-align: center;
+}
+.sec6-btn{
+    padding: 0.2rem 0.3rem;
+    font-size: 2.5rem;
+    font-family: Midnight;
+    color: #000;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto 5px;
+    background-color: #f5a05a;
+    transform: rotate(-5deg);
+
+}
+.topsec6 h3{
+    font-family: Midnight;
+    font-size: 2rem;
+    color: white;
+}
+.topsec6 p{
+    color: white;
+}
+.secion6img{
+    background-color: #fdbe76;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15px;
+    display: flex;
+    gap: 150px;
+    color: rgb(107, 51, 6);
+   
+}
+.text6 h3{
+    font-size: 2.5rem;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+#tea6{
+    margin: 5px 0 50px 0;
+}
+#btne{
+    font-family: Midnight;
+    background-color: #f5a05a;
+    transform: rotate(-5deg);
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+.journal{
+    width:100%;
+    padding:80px 2%;
+    background:#efeee4;
+}
+
+.journal-heading{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+}
+
+.tag{
+    display:inline-block;
+    background:#f3b400;
+    padding:6px 14px;
+    border:2px solid #222;
+    border-radius:4px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.journal-heading h2{
+    font-size:58px;
+    line-height:1.1;
+    font-weight:400;
+    color:#222;
+}
+
+.journal-heading em{
+    font-style:italic;
+}
+
+.journal-slider{
+    margin-top:70px;
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding-bottom:10px;
+}
+
+.journal-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.card{
+    min-width:290px;
+    border:1px solid #222;
+    border-radius:10px;
+    overflow:hidden;
+    background:#2c2968;
+    flex-shrink:0;
+    position:relative;
+}
+
+.category{
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:5;
+    background:#fff;
+    border:1px solid #222;
+    padding:4px 8px;
+    font-size:12px;
+    font-weight:700;
+    border-radius:4px;
+}
+
+.card-img{
+    height:280px;
+    background:#c8d9f1;
+    overflow:hidden;
+}
+
+.card-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.card-content{
+    background:#bdd1ef;
+    min-height:65px;
+    padding:16px;
+    font-size:14px;
+    font-family: Midnight;
+    color:#111;
+    text-transform:uppercase;
+}
+
+.dots{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin:30px 0;
+}
+
+.dots span{
+    width:30px;
+    height:3px;
+    background:#c9c9c9;
+}
+
+.dots .active{
+    background:#222;
+}
+
+.journal-btn{
+    display:block;
+    margin:auto;
+    border:none;
+    background:#2c2968;
+    color:#fff;
+    padding:18px 40px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.footer{
+    width:100%;
+    background:#c7d8f1;
+    overflow:hidden;
+}
+
+
+.newsletter{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.newsletter h2{
+    font-size:32px;
+    margin-bottom:15px;
+    color:#222;
+}
+
+.newsletter p{
+    max-width:500px;
+    margin:auto;
+    color:#555;
+    line-height:1.5;
+}
+
+.subscribe-box{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.subscribe-box input{
+    width:320px;
+    padding:14px;
+    border:1px solid #222;
+    border-radius:8px;
+    outline:none;
+}
+
+.subscribe-box button{
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    background:#2b2867;
+    color:#fff;
+    cursor:pointer;
+}
+
+
+
+.social-icons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.social-icons i{
+    width:42px;
+    height:42px;
+    border:2px solid #222;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    cursor:pointer;
+}
+
+
+.footer-links{
+    width:95%;
+    margin:auto;
+    background:#2b2867;
+    color:#fff;
+    border-radius:10px;
+    padding:40px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:30px;
+}
+
+.column h4{
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.column a{
+    display:block;
+    color:#d4d4d4;
+    text-decoration:none;
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+
+.footer-bottom{
+    position:relative;
+    margin-top:50px;
+}
+
+.footer-bottom img{
+    width:100%;
+    display:block;
+}
+
+.footer-logo{
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    font-size:60px;
+    font-family:serif;
+    color:#222;
+    line-height:0.9;
+}
+
 /* responsive  */
 @media (max-width: 1024px) {
-    nav {
-        padding: 0.85rem 1rem;
+       .footer-links{
+        grid-template-columns:repeat(3,1fr);
     }
-    .nav-part2 {
-        width: 50px;
+
+    .btnsection{
+        width:95%;
     }
-    .cardwraper{
-    display: flex;
-    overflow-x: auto;
-}
-    nav .nav-part1,
-    nav .navpart-3 {
-        gap: 1rem;
-        font-size: 0.68rem;
-        align-items: center;
+
+    .btnsection button{
+        width:calc((100% - 20px)/2);
     }
-    #section1 .banner {
-        height: 75vh;
-        object-fit: cover;  
+
+    .review-header h2{
+        font-size:3rem;
     }
-    .benner-contend h1 {
-        font-size: 2rem;
+
+    .teaheading{
+        font-size:3rem;
+        margin-top:50px;
     }
-    .benner-contend p {
-        font-size: 0.9rem;
-        max-width: 500px;
+
+    .teapara{
+        font-size:1.3rem;
     }
-    .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
+
+    .secion6img{
+        gap:40px;
+        width:95%;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -252,15 +797,27 @@ font-family: fingtree;
     .navpart-3 {
         gap: 0; 
     }
-    .cardwraper{
-        display: flex;
-        overflow-x: auto;
-        gap: 10px;
-        justify-content: flex-start;
-        scroll-snap-type: x mandatory;
+   .cardwraper{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    justify-content: flex-start;
+
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+
+.cardwraper::-webkit-scrollbar {
+    display: none;
+}
+    
+    .hrline{
+    width: 2px;
+    height: 50px;
+    background-color: black;
+    border: none;
     }
-    
-    
     
 
     .card{
@@ -293,5 +850,248 @@ font-family: fingtree;
     }
     #section1 .benner-contend .btn {
         width: 80vw;
+    }
+      #section3{
+        width: 100%;
+    }
+
+    #section3 .section3contend{
+        width: 95%;
+    }
+
+    .hading3{
+        font-size: 1.8rem !important;
+        line-height: 1.2;
+    }
+
+    .feld{
+        width: 100%;
+    }
+
+    .btnsection{
+        width: 95%;
+        gap: 8px;
+    }
+
+    .btnsection button{
+        width: calc((100% - 8px) / 1);
+        font-size: 1rem;
+        padding: .8rem .5rem;
+    }
+      #secion4{
+        width: 100%;
+        min-height: auto;
+    }
+
+    #secion4 .section4img{
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .btn4{
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        left: 50%;
+        transform: translateX(-50%) rotate(-5deg);
+        top: 8%;
+        white-space: nowrap;
+    }
+
+    #secion4 .sec4heading{
+        font-size: 2.2rem;
+        left: 50%;
+        top: 22%;
+        transform: translateX(-50%);
+        width: 90%;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .sec4text{
+        width: 90%;
+        left: 50%;
+        top: 48%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    #secion4 .ketlly .kellyimg{
+        width: 70px;
+        left: auto;
+        right: 10px;
+        top: 10px;
+    }
+
+    .container{
+        left: 50%;
+        top: 72%;
+        transform: translateX(-50%);
+        width: 95%;
+    }
+
+    .imgbttom{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .element,
+    .elemnt{
+        text-align: center;
+    }
+
+    .imges{
+        width: 50px;
+    }
+
+    .imgbttom p{
+        font-size: .8rem;
+    }
+     .review-header{
+        width: 90%;
+    }
+
+    .review-header h2{
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .review-wrapper{
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        margin: 2 auto;
+        scroll-snap-type: x mandatory;
+
+        padding: 0 5;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .review-wrapper::-webkit-scrollbar{
+        display: none;
+    }
+
+    .review-card{
+        min-width: 280px;
+        max-width: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+  
+  .cardwarper{
+    flex-direction: column;
+}
+
+.imgtea{
+    width: 100%;
+    height: auto;
+}
+
+.teaheading{
+    font-size: 2.2rem;
+    margin: 20px 0 10px;
+}
+
+.teapara{
+    font-size: 1rem;
+    margin: 0;
+}
+
+.teabutton{
+    margin: 20px auto;
+    display: block;
+}
+
+.textcontainer{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.secion6img{
+    width: 95%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.secion6img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.text6{
+    text-align: center;
+}
+
+.text6 h3{
+    font-size: 2rem;
+}
+
+#btne{
+    margin-top: 0;
+}
+
+#tea6{
+    margin: 20px auto;
+    display: block;
+}
+
+.sec6-btn{
+    font-size: 1.4rem;
+}
+
+.topsec6 h3{
+    font-size: 1.5rem;
+    padding: 0 15px;
+}
+  .journal{
+        padding:60px 0 40px;
+    }
+
+    .journal-heading{
+        padding:0 20px;
+    }
+
+    .journal-heading h2{
+        font-size:34px;
+    }
+
+    .journal-slider{
+        padding-left:20px;
+    }
+
+    .card{
+        min-width:260px;
+    }
+
+    .card-img{
+        height:240px;
+    }
+
+    .journal-btn{
+        width:90%;
+    }
+     .footer-links{
+        grid-template-columns:repeat(2,1fr);
+        padding:25px;
+    }
+
+    .subscribe-box{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .subscribe-box input{
+        width:100%;
+        max-width:350px;
+    }
+
+    .footer-logo{
+        font-size:28px;
     }
 }
